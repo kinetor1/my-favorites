@@ -68,3 +68,26 @@
   border: none;
   cursor: pointer;
 }
+
+.warning-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}

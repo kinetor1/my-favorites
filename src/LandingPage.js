@@ -25,6 +25,12 @@ const LandingPage = () => {
     toggleModal();
   };
 
+  const handleDelete = (siteToDelete) => {
+    const updatedSites = sites.filter((site) => site.url !== siteToDelete.url);
+    setSites(updatedSites);
+    localStorage.setItem("sites", JSON.stringify(updatedSites));
+  };
+
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -70,7 +76,7 @@ const LandingPage = () => {
         </div>
       </header>
       <div className="cards-container">
-        <Sites sites={sites} />
+        <Sites sites={sites} handleDelete={handleDelete}/>
       </div>
       {showForm && <Form onSubmit={handleSubmit} toggleModal={toggleModal} />}
     </div>

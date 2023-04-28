@@ -5,6 +5,7 @@
 }
 
 .site-card {
+  position: relative; /* Add this line */
   background-color: #ffffff;
   padding: 15px;
   border-radius: 4px;
@@ -27,4 +28,17 @@ a.site-card-link {
   height: 150px; /* Set a specific height for the image */
   border-radius: 4px;
   object-fit: cover; /* Maintain the aspect ratio of the image */
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgb(139, 27, 19);
+  color: #f3f3f3;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
